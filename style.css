@@ -1,4 +1,3 @@
-/* style.css - Redesign Moderno Legendary Acessórios */
 @charset "UTF-8";
 
 /* ===== VARIÁVEIS ===== */
@@ -722,12 +721,12 @@ section {
 .modal-content {
    position: relative;
     background: var(--white);
-    border-radius: 12px; /* Bordas mais arredondadas */
+    border-radius: 12px; /* Bordas arredondadas */
     width: 100%;
-    max-width: 550px; /* Reduzido ainda mais para ficar proporcional */
+    max-width: 550px;
     padding: 25px;
     animation: slideUp 0.4s ease;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8); /* Sombra mais intensa */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8); /* Sombra intensa */
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -968,7 +967,7 @@ section {
   }
 }
 
-/* CORREÇÃO ESPECÍFICA PARA TEXTOS DO HERO */
+/* TEXTOS DO HERO */
 .hero-content h1,
 .hero-content p {
   text-align: center !important;
@@ -991,7 +990,6 @@ section {
   }
 }
 
-/* Adicione ao final do style.css */
 .contact-form select {
     appearance: none;
     -webkit-appearance: none;
