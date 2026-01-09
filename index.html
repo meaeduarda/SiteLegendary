@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary | Acessórios Artesanais Unissex</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imagens/logo.png">
+</head>
+
+<body>
+
+    <!-- Header/Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#hero" class="logo-link">
+                <img src="imagens/logo.png" alt="Legendary Acessórios" class="logo">
+            </a>
+
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu">
+                    <span class="hamburger"><i class="fas fa-bars"></i></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section com Carrossel -->
+    <section id="hero" class="hero">
+        <!-- Carrossel de imagens -->
+        <div class="hero-carousel">
+            <div class="carousel-slide active"></div>
+            <div class="carousel-slide"></div>
+            <div class="carousel-slide"></div>
+        </div>
+
+        <!-- Conteúdo do Hero -->
+        <div class="hero-content">
+            <h1>Seu estilo fora da caixinha</h1>
+            <p>Acessórios artesanais unissex feitos com amor e exclusividade para você se expressar</p>
+            <a href="#produtos" class="btn btn-primary">Ver Coleção</a>
+        </div>
+
+        <!-- Controles do carrossel -->
+        <div class="carousel-controls">
+            <div class="carousel-dot active" data-slide="0"></div>
+            <div class="carousel-dot" data-slide="1"></div>
+            <div class="carousel-dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre a Legendary</h2>
+            <div class="grid-2 fade-in">
+                <div>
+                    <h3>Mais do que acessórios, uma expressão</h3>
+                    <p>Somos uma marca de acessórios artesanais que acredita que cada peça conta uma história.
+                        Especializados em modelos unissex, criamos peças que combinam com qualquer estilo e
+                        personalidade.</p>
+                    <p><strong>Nosso diferencial:</strong> Na primeira compra, você recebe um mimo exclusivo totalmente
+                        personalizado!</p>
+                    <p>Trabalhamos com encomendas personalizadas para que você tenha uma peça verdadeiramente única.</p>
+                </div>
+                <div class="materia-prima fade-in">
+                    <h3><i class="fas fa-gem"></i> Matéria Prima Premium</h3>
+                    <p>Utilizamos apenas materiais de alta qualidade:</p>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i>
+                            Miçangas plásticas e foscas</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i>
+                            Pedras naturais selecionadas</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i>
+                            Materiais sustentáveis</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i>
+                            Ferragens resistentes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player de Vídeo com Mimo -->
+    <section class="section" style="padding: 60px 0; background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);">
+        <div class="container">
+            <div class="video-player-container fade-in" style="text-align: center;">
+                <h3 style="color: var(--black); margin-bottom: 2rem; font-size: 1.8rem;">
+                    <i class="fas fa-gift" style="color: var(--primary); margin-right: 10px;"></i>
+                    Ganhe um Mimo da sua Série Favorita!
+                </h3>
+                <p style="color: var(--gray); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
+                    Assista ao nosso vídeo especial e descubra como garantir um mimo exclusivo inspirado na sua série preferida!
+                </p>
+                
+                <div class="video-player-wrapper" style="position: relative; display: inline-block;">
+                    <!-- Ícone do Player com efeito pulsante -->
+                    <div class="play-button-container">
+                        <button id="playVideoBtn" class="play-button" aria-label="Assistir vídeo">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <!-- Ondas de efeito pulsante -->
+                        <div class="pulse-ring pulse-ring-1"></div>
+                        <div class="pulse-ring pulse-ring-2"></div>
+                        <div class="pulse-ring pulse-ring-3"></div>
+                    </div>
+                    
+                    <div class="video-hint" style="margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9rem;">
+                        <i class="fas fa-hand-point-up" style="margin-right: 8px;"></i> Clique para assistir
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para o vídeo (COMPACTO) -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 style="color: var(--black);">
+                    <i class="fas fa-gift" style="color: var(--primary); margin-right: 8px;"></i>
+                    Ganhe um Mimo Exclusivo!
+                </h3>
+                <p style="color: var(--gray); margin: 5px 0 10px; font-size: 0.95rem; line-height: 1.5;">
+                    Faça sua primeira compra mencionando sua série favorita e receba um mimo personalizado!
+                </p>
+            </div>
+            <div class="video-container">
+                <video id="seriesVideo" controls controlsList="nodownload">
+                    <source src="serie.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="video-time">0:03 / 0:17</div>
+            </div>
+            <div class="modal-footer">
+                <p style="color: var(--black); font-weight: 600; margin-bottom: 12px; font-size: 0.95rem;">
+                    <i class="fas fa-star" style="color: var(--primary); margin-right: 8px;"></i>
+                    Promoção Válida para Primeira Compra
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produtos -->
+    <section id="produtos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+
+            <div class="products-grid">
+                <!-- Produto 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria5.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Straphones</span>
+                        <h3>Straphones Personalizados</h3>
+                        <p>Proteja seus fones com estilo e personalidade.</p>
+                        <div class="product-price">A partir de R$ 12,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria2.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Coleira de Miçanga</span>
+                        <h3>Coleira de Miçanga</h3>
+                        <p>Peça versátil que combina com qualquer look.</p>
+                        <div class="product-price">A partir de R$ 15,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria4.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Pulseira Pedra Natural</h3>
+                        <p>Pedra Ágata Azul com energias positivas.</p>
+                        <div class="product-price">R$ 32,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria1.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Pulseira Casal Magnética</h3>
+                        <p>Conjunto especial para casais apaixonados.</p>
+                        <div class="product-price">R$ 25,00 (par)</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <!-- Produto 5 -->
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria3.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Pulseira Macramê</h3>
+                        <p>Para dias de praia no estilo
+                        </p>
+                        <div class="product-price">R$ 10,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria7.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Pulseira Olho de Tigre</h3>
+                        <p>Pulseira com pedra Olho de Tigre para proteção e energia positiva.
+                        </p>
+                        <div class="product-price">R$ 28,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria8.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Pulseira Emoji Feliz</h3>
+                        <p>Pulseira divertida para alegrar seu dia.
+                        </p>
+                        <div class="product-price">R$ 20 (Conjunto)</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria9.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Coleira de Miçanga</span>
+                        <h3>Coleira de Miçanga Patinha</h3>
+                        <p>Coleira estilosa com pingente de patinha para amantes de pets.
+                        </p>
+                        <div class="product-price">R$ 18,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria10.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Coleira de Miçanga</span>
+                        <h3>Coleira de Miçanga Peixinho</h3>
+                        <p>Coleira estilosa com pingente de peixinho para amantes de pets.
+                        </p>
+                        <div class="product-price">R$ 18,00</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria11.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Conjunto Pulseira Preta Pedra Ágata Roxa</h3>
+                        <p>Conjunto de pulseiras com pedra Ágata Roxa para estilo e proteção.
+                        </p>
+                        <div class="product-price">R$ 12,00 (Conjunto)</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria12.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Conjunto Discos Amizade</h3>
+                        <p>Conjunto de pulseiras com discos para celebrar a amizade.
+                        </p>
+                        <div class="product-price">R$ 12,00 (Und)</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-img" style="background: url('imagens/galeria13.png') center/cover;"></div>
+                    <div class="product-info">
+                        <span class="product-category">Pulseiras</span>
+                        <h3>Conjunto Amizade</h3>
+                        <p>Conjunto de pulseiras da sua série favorita.
+                        </p>
+                        <div class="product-price">R$ 18,00 (Par)</div>
+                        <a href="#contato" class="btn btn-outline" style="width: 100%;">Encomendar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tabela de Preços -->
+            <div class="table-wrapper fade-in" style="margin-top: 4rem;">
+                <h3 class="text-center" style="margin-bottom: 2rem;">Tabela Completa de Preços</h3>
+                <div style="overflow-x: auto;">
+                    <table
+                        style="width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);">
+                        <thead>
+                            <tr style="background: var(--primary);">
+                                <th style="padding: 15px; text-align: left;">Categoria</th>
+                                <th style="padding: 15px; text-align: left;">Modelo</th>
+                                <th style="padding: 15px; text-align: left;">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 15px;">Straphones</td>
+                                <td style="padding: 15px;">Todos os modelos</td>
+                                <td style="padding: 15px;">A partir de R$ 12,00</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td rowspan="2" style="padding: 15px; vertical-align: top;">Colares</td>
+                                <td style="padding: 15px;">Choker</td>
+                                <td style="padding: 15px;">A partir de R$ 10,00</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 15px;">Tradicional</td>
+                                <td style="padding: 15px;">A partir de R$ 15,00</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" style="padding: 15px; vertical-align: top;">Pulseiras</td>
+                                <td style="padding: 15px;">Tradicional</td>
+                                <td style="padding: 15px;">A partir de R$ 10,00</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px;">Pedras Naturais</td>
+                                <td style="padding: 15px;">R$ 32,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contato -->
+<section id="contato" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+
+        
+            <div>
+                <form class="contact-form" id="whatsappForm">
+                    <div class="form-group">
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select name="tipo_produto" id="tipo_produto" required style="width: 100%; padding: 18px; border: 1px solid #ddd; border-radius: var(--radius); font-family: 'Montserrat', sans-serif; font-size: 1rem; background-color: var(--gray-light);">
+                            <option value="" disabled selected>Selecione o tipo de produto</option>
+                            <option value="Colar">Colar</option>
+                            <option value="Pulseira">Pulseira</option>
+                            <option value="StrapPhone">StrapPhone</option>
+                            <option value="Coleira">Coleira</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select name="pagamento" id="pagamento" required style="width: 100%; padding: 18px; border: 1px solid #ddd; border-radius: var(--radius); font-family: 'Montserrat', sans-serif; font-size: 1rem; background-color: var(--gray-light);">
+                            <option value="" disabled selected>Selecione a forma de pagamento</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Pix">Pix</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="descricao" id="descricao" placeholder="Descreva o produto que você deseja (cor, material, tamanho, etc.)" required style="width: 100%; padding: 18px; border: 1px solid #ddd; border-radius: var(--radius); font-family: 'Montserrat', sans-serif; font-size: 1rem; min-height: 160px; resize: vertical; background-color: var(--gray-light);"></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" style="width: 100%;" onclick="enviarParaWhatsApp()">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/legendary_acessorios/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5581994527528" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy; <span id="current-year"></span> Legendary Acessórios - Todos os direitos
+                        reservados</p>
+                    <p>Desenvolvido por Maria Eduarda Cavalcanti</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5581994527528" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+// Menu Mobile
+const btnMobile = document.getElementById('btn-mobile');
+const nav = document.getElementById('nav');
+
+function toggleMenu() {
+    nav.classList.toggle('active');
+    const isActive = nav.classList.contains('active');
+    btnMobile.setAttribute('aria-expanded', isActive);
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        btnMobile.setAttribute('aria-expanded', false);
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Scroll animation
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Carrossel automático
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+
+function showSlide(n) {
+    // Remove a classe active de todos os slides e dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Adiciona a classe active ao slide e dot atual
+    slides[n].classList.add('active');
+    dots[n].classList.add('active');
+
+    currentSlide = n;
+}
+
+// Adiciona eventos de clique nos dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+});
+
+// Inicia o carrossel automático
+function startCarousel() {
+    setInterval(() => {
+        let nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+    }, 5000); // Muda a cada 5 segundos
+}
+
+// Inicia o carrossel
+startCarousel();
+
+// Atualiza o ano atual no footer
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// Controle do modal de vídeo
+const videoModal = document.getElementById('videoModal');
+const playVideoBtn = document.getElementById('playVideoBtn');
+const modalClose = document.querySelector('.modal-close');
+const seriesVideo = document.getElementById('seriesVideo');
+
+// Formata o tempo do vídeo (minutos:segundos)
+function formatTime(seconds) {
+    if (isNaN(seconds)) return "0:00";
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Atualiza o tempo do vídeo em tempo real
+function updateVideoTime() {
+    const currentTime = formatTime(seriesVideo.currentTime);
+    const duration = formatTime(seriesVideo.duration);
+    const timeDisplay = document.querySelector('.video-time');
+    
+    if (timeDisplay) {
+        timeDisplay.textContent = `${currentTime} / ${duration}`;
+    }
+}
+
+// Inicializa o tempo quando o vídeo carrega
+function initVideoTime() {
+    const timeDisplay = document.querySelector('.video-time');
+    if (timeDisplay) {
+        // Define um tempo inicial
+        timeDisplay.textContent = "0:00 / 0:17";
+        
+        // Quando os metadados do vídeo carregarem, atualiza com a duração real
+        seriesVideo.addEventListener('loadedmetadata', function() {
+            const duration = formatTime(seriesVideo.duration);
+            timeDisplay.textContent = `0:00 / ${duration}`;
+        });
+    }
+}
+
+// Inicializa o tempo do vídeo
+initVideoTime();
+
+// Abrir modal
+playVideoBtn.addEventListener('click', () => {
+    videoModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Previne scroll
+    
+    // Inicia o vídeo automaticamente após um pequeno delay
+    setTimeout(() => {
+        seriesVideo.play().catch(e => {
+            console.log("Autoplay não permitido pelo navegador: ", e);
+            // Se autoplay falhar, mostra controles mais proeminentes
+            seriesVideo.controls = true;
+        });
+    }, 300);
+});
+
+// Fechar modal
+modalClose.addEventListener('click', () => {
+    closeVideoModal();
+});
+
+// Fechar modal clicando fora
+videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+        closeVideoModal();
+    }
+});
+
+// Função para fechar o modal
+function closeVideoModal() {
+    videoModal.classList.remove('active');
+    seriesVideo.pause();
+    seriesVideo.currentTime = 0; // Reinicia o vídeo
+    updateVideoTime(); // Atualiza o tempo para 0:00
+    document.body.style.overflow = 'auto';
+}
+
+// Fechar modal com ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+        closeVideoModal();
+    }
+});
+
+// Adiciona listener para atualizar o tempo do vídeo durante a reprodução
+seriesVideo.addEventListener('timeupdate', updateVideoTime);
+
+// Adiciona listener para quando o vídeo termina
+seriesVideo.addEventListener('ended', () => {
+    // Opcional: mostrar mensagem ou ação quando o vídeo termina
+    console.log("Vídeo terminado!");
+});
+
+// Suaviza o scroll para links âncora
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 100, // Ajusta para o header fixo
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Adiciona efeito de hover nos cards de produto
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-15px)';
+        this.style.boxShadow = 'var(--shadow-hover)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = 'var(--shadow)';
+    });
+});
+
+// Função para enviar formulário para WhatsApp
+function enviarParaWhatsApp() {
+    // Coleta os valores do formulário
+    const nome = document.getElementById('nome').value.trim();
+    const tipoProduto = document.getElementById('tipo_produto').value;
+    const pagamento = document.getElementById('pagamento').value;
+    const descricao = document.getElementById('descricao').value.trim();
+    
+    // Validação dos campos
+    if (!nome || !tipoProduto || !pagamento || !descricao) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return false;
+    }
+    
+    // Formata a mensagem para WhatsApp
+    const mensagem = `*NOVO PEDIDO - LEGENDARY ACESSÓRIOS*%0A%0A` +
+                     `*Nome:* ${nome}%0A` +
+                     `*Tipo de Produto:* ${tipoProduto}%0A` +
+                     `*Forma de Pagamento:* ${pagamento}%0A` +
+                     `*Descrição do Produto:*%0A${descricao}%0A%0A` +
+                     `_Enviado através do site Legendary Acessórios_`;
+    
+    // Número do WhatsApp (apenas números, sem espaços ou caracteres especiais)
+    const telefone = '5581994527528';
+    
+    // URL do WhatsApp Web com a mensagem formatada
+    const url = `https://wa.me/${telefone}?text=${mensagem}`;
+    
+    // Abre o WhatsApp em uma nova aba
+    window.open(url, '_blank');
+    
+    // Limpa o formulário após o envio
+    document.getElementById('whatsappForm').reset();
+    
+    // Mensagem de confirmação
+    alert('Redirecionando para o WhatsApp...');
+    
+    return false;
+}
+
+// Adiciona evento de submit ao formulário
+if (document.getElementById('whatsappForm')) {
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        enviarParaWhatsApp();
+    });
+}
+
+// Adiciona validação de foco nos campos do formulário
+if (document.querySelector('.contact-form')) {
+    document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--primary)';
+            this.style.boxShadow = '0 0 0 3px rgba(228, 177, 36, 0.2)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.style.borderColor = '#ddd';
+            this.style.boxShadow = 'none';
+        });
+    });
+}
+
+// Validação do formulário antigo (se ainda existir)
+const contactForm = document.querySelector('.contact-form.old-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const nome = this.querySelector('input[name="nome"]').value.trim();
+        const email = this.querySelector('input[name="email"]').value.trim();
+        const mensagem = this.querySelector('textarea[name="mensagem"]').value.trim();
+        
+        if (!nome || !email || !mensagem) {
+            e.preventDefault();
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return false;
+        }
+        
+        // Validação básica de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            e.preventDefault();
+            alert('Por favor, insira um email válido.');
+            return false;
+        }
+        
+        // Se tudo estiver ok, o formulário será enviado normalmente
+        return true;
+    });
+}
+
+// Previne que o formulário seja enviado por ENTER (só envia por clique no botão)
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && e.target.closest('#whatsappForm')) {
+        e.preventDefault();
+        enviarParaWhatsApp();
+    }
+});
+    </script>
+</body>
+
+</html>
