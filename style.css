@@ -829,22 +829,25 @@ section {
   }
 
   #menu {
+    display: block; 
     position: fixed;
-    top: var(--header-height);
+    top: var(--header-height); 
     left: 0;
     width: 100%;
-    background: var(--black);
-    flex-direction: column;
-    gap: 0;
     height: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 0 !important; 
+    padding: 0 !important;
     overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease;
+    z-index: 999;
   }
 
-  #menu.active {
+  #nav.active #menu {
     height: auto;
-    padding: 2rem 0;
+    padding: 0;
   }
 
   #menu li {
@@ -929,7 +932,12 @@ section {
   
   .play-button {
     font-size: 2rem;
+    -webkit-tap-highlight-color: transparent;
   }
+
+  .play-button i {
+  color: var(--black); 
+}
   
   .modal-content {
     padding: 20px;
