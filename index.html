@@ -572,13 +572,12 @@
         // Abrir modal
         playVideoBtn.addEventListener('click', () => {
             videoModal.classList.add('active');
-            document.body.style.overflow = 'hidden'; //Previnir o Scroll
+            document.body.style.overflow = 'hidden'; 
 
             // Inicia o vídeo 
             setTimeout(() => {
                 seriesVideo.play().catch(e => {
                     console.log("Autoplay não permitido pelo navegador: ", e);
-                    // Se autoplay falhar, mostra controles mais proeminentes
                     seriesVideo.controls = true;
                 });
             }, 300);
@@ -617,7 +616,7 @@
 
         // Adiciona listener para quando o vídeo termina
         seriesVideo.addEventListener('ended', () => {
-            // Opcional: mostrar mensagem ou ação quando o vídeo termina
+
             console.log("Vídeo terminado!");
         });
 
@@ -632,7 +631,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100, // Deixar o header fixo
+                        top: targetElement.offsetTop - 100, // header fixo
                         behavior: 'smooth'
                     });
                 }
@@ -680,13 +679,12 @@
             // URL do WhatsApp Web com a mensagem formatada
             const url = `https://wa.me/${telefone}?text=${mensagem}`;
 
-            // Abre o WhatsApp em uma nova aba
             window.open(url, '_blank');
 
-            // Limpa o formulário após o envio
+            
             document.getElementById('whatsappForm').reset();
 
-            // Mensagem de confirmação
+            // confirmação
             alert('Redirecionando para o WhatsApp...');
 
             return false;
@@ -730,7 +728,6 @@
                 }
 
 
-                // Se tudo estiver ok, o formulário será enviado normalmente
                 return true;
             });
         }
