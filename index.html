@@ -418,8 +418,8 @@
                 <div class="copyright">
                     <p>Copyright &copy; <span id="current-year"></span> Legendary Acessórios - Todos os direitos
                         reservados</p>
-                    <p>Desenvolvido por <a href="https://www.linkedin.com/in/maria-eduarda-cavalcanti-54123628b/"
-                            target="_blank" rel="noopener noreferrer" class="footer-link">Maria Eduarda Cavalcanti</a>
+                    <p>Desenvolvido por <a href="https://www.cronossolutions.com.br"
+                            target="_blank" rel="noopener noreferrer" class="footer-link">Cronos Solutions Tech</a>
                     </p>
                     <p>Localizada no coração de OLINDA - PE </p>
                 </div>
@@ -522,7 +522,7 @@
         const modalClose = document.querySelector('.modal-close');
         const seriesVideo = document.getElementById('seriesVideo');
 
-        // Formata o tempo do vídeo (minutos:segundos)
+       
         function formatTime(seconds) {
             if (isNaN(seconds)) return "0:00";
             const mins = Math.floor(seconds / 60);
@@ -541,14 +541,14 @@
             }
         }
 
-        // Inicializa o tempo quando o vídeo carrega
+ 
         function initVideoTime() {
             const timeDisplay = document.querySelector('.video-time');
             if (timeDisplay) {
-                // Define um tempo inicial
+                
                 timeDisplay.textContent = "0:00 / 0:17";
 
-                // Quando os metadados do vídeo carregarem, atualiza com a duração real
+                
                 seriesVideo.addEventListener('loadedmetadata', function () {
                     const duration = formatTime(seriesVideo.duration);
                     timeDisplay.textContent = `0:00 / ${duration}`;
@@ -568,7 +568,7 @@
             setTimeout(() => {
                 seriesVideo.play().catch(e => {
                     console.log("Autoplay não permitido pelo navegador: ", e);
-                    // Se autoplay falhar, mostra controles mais proeminentes
+            
                     seriesVideo.controls = true;
                 });
             }, 300);
@@ -602,7 +602,7 @@
             }
         });
 
-        // Adiciona listener para atualizar o tempo do vídeo durante a reprodução
+        
         seriesVideo.addEventListener('timeupdate', updateVideoTime);
 
         // Adiciona listener para quando o vídeo termina
@@ -643,7 +643,7 @@
 
         // Função para enviar formulário para WhatsApp
         function enviarParaWhatsApp() {
-            // Coleta os valores do formulário
+            
             const nome = document.getElementById('nome').value.trim();
             const tipoProduto = document.getElementById('tipo_produto').value;
             const pagamento = document.getElementById('pagamento').value;
@@ -663,19 +663,19 @@
                 `*Descrição do Produto:*%0A${descricao}%0A%0A` +
                 `_Enviado através do site Legendary Acessórios_`;
 
-            // Número do WhatsApp
+            
             const telefone = '5581994527528';
 
-            // URL do WhatsApp Web com a mensagem formatada
+            
             const url = `https://wa.me/${telefone}?text=${mensagem}`;
 
-            // Abre o WhatsApp em uma nova aba
+            
             window.open(url, '_blank');
 
-            // Limpa o formulário após o envio
+            
             document.getElementById('whatsappForm').reset();
 
-            // Mensagem de confirmação
+            
             alert('Redirecionando para o WhatsApp...');
 
             return false;
@@ -689,7 +689,7 @@
             });
         }
 
-        // Adiciona validação de foco nos campos do formulário
+       
         if (document.querySelector('.contact-form')) {
             document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(input => {
                 input.addEventListener('focus', function () {
@@ -718,12 +718,11 @@
                     return false;
                 }
 
-                // Se tudo estiver ok, o formulário será enviado normalmente
                 return true;
             });
         }
 
-        // Previne que o formulário seja enviado por ENTER (só envia por clique no botão)
+        
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' && e.target.closest('#whatsappForm')) {
                 e.preventDefault();
